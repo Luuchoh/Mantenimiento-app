@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/Mantenimiento-app/static/js/main.3dacc0c5.chunk.js",
+    "main.js.map": "/Mantenimiento-app/static/js/main.3dacc0c5.chunk.js.map",
+    "runtime-main.js": "/Mantenimiento-app/static/js/runtime-main.411c5df1.js",
+    "runtime-main.js.map": "/Mantenimiento-app/static/js/runtime-main.411c5df1.js.map",
+    "static/css/2.ecab8046.chunk.css": "/Mantenimiento-app/static/css/2.ecab8046.chunk.css",
+    "static/js/2.a8ca9b5b.chunk.js": "/Mantenimiento-app/static/js/2.a8ca9b5b.chunk.js",
+    "static/js/2.a8ca9b5b.chunk.js.map": "/Mantenimiento-app/static/js/2.a8ca9b5b.chunk.js.map",
+    "index.html": "/Mantenimiento-app/index.html",
+    "static/css/2.ecab8046.chunk.css.map": "/Mantenimiento-app/static/css/2.ecab8046.chunk.css.map",
+    "static/js/2.a8ca9b5b.chunk.js.LICENSE.txt": "/Mantenimiento-app/static/js/2.a8ca9b5b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.411c5df1.js",
+    "static/css/2.ecab8046.chunk.css",
+    "static/js/2.a8ca9b5b.chunk.js",
+    "static/js/main.3dacc0c5.chunk.js"
+  ]
+}
