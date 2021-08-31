@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 // import DetailPet from "./DetailPet";
-import { activeDog } from "../actions/dogAction";
+import { activeDog, Delete } from "../actions/dogAction";
 
 const ListPet = ({ pet }) => {
   const dispatch = useDispatch();
@@ -12,13 +12,17 @@ const ListPet = ({ pet }) => {
   const handleEdit = async (data) => {
     await dispatch(activeDog(data));
     // console.log(data);
+    
+  };
+
+  const handleDelete = async(id) => {
+    await dispatch(Delete(id));
   };
   return (
     <>
-      {
-        pet.map((data, index) => (
+      {pet.map((data, index) => (
         <div
-          className="col-md-4 ms-5"
+          className="col-md-4 mx-2"
           key={`${index}-${data.id}`}
           data-bs-toggle="modal"
           data-bs-target={`#exampleModal${data.id}`}
@@ -71,20 +75,21 @@ const ListPet = ({ pet }) => {
                   >
                     Editar
                   </Link>
-                  <button
+                  <Link
                     type="button"
                     className="btn btn-secondary"
                     data-bs-dismiss="modal"
+                    to="/"
+                    onClick={() => handleDelete(data.id)}
                   >
-                    Close
-                  </button>
+                    Eliminar 
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))
-      }
+      ))}
     </>
   );
 };

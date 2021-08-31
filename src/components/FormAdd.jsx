@@ -65,7 +65,6 @@ const FormAdd = ({ active }) => {
     } else if (active.id === activeId.current) {
       formik.setValues(active);
     }
-    activeId.current = active.id;
   }, [active]);
 
   return (
@@ -98,7 +97,7 @@ const FormAdd = ({ active }) => {
         style={{ display: "none" }}
         onChange={handleFileChange}
       />
-      <div className="w-50 btn btn-primary btn-register text-uppercase fw-bold">
+      <div className="w-50 btn btn-primary p-0 my-2 text-uppercase fw-bold">
         <input
           type="button"
           className="btn text-white fw-bold"
