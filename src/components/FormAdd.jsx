@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import { dogNew, Edit, startUploading } from "../actions/dogAction";
 
 const FormAdd = ({ active }) => {
-  const activeId = useRef(active.id);
 
   // console.log(active.id);
   // console.log(activeId);
@@ -15,9 +14,7 @@ const FormAdd = ({ active }) => {
 
   const formik = useFormik({
     initialValues: {
-      url: "",
-      name: "",
-      description: "",
+      ...active,
     },
     validationSchema: Yup.object({
       url: Yup.string().url().required("URL requerido"),
@@ -56,16 +53,6 @@ const FormAdd = ({ active }) => {
 
     }
   }
-
-
-  useEffect(() => {
-    if (active.id !== activeId.current) {
-      console.log("No son iguales");
-      formik.resetForm();
-    } else if (active.id === activeId.current) {
-      formik.setValues(active);
-    }
-  }, [active]);
 
   return (
     <form

@@ -11,7 +11,7 @@ const AddPet = () => {
   const { active } = useSelector((state) => state.dog);
 
   useEffect(() => {
-    if(active.name.length < 0){
+    if(active.name.length > 0){
       setTitle(true)
     }
   }, [active])
